@@ -1,7 +1,8 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import AntDesign from '@expo/vector-icons/AntDesign';
 
-export default function Card({ nome, tipo, telefone, onPress, onDelete}) {
+export default function Card({ nome, tipo, telefone, onPress, onDelete, onEdit}) {
   return (
   <>
     <TouchableOpacity onPress={onPress} style={styles.container}>
@@ -11,11 +12,15 @@ export default function Card({ nome, tipo, telefone, onPress, onDelete}) {
         <Text style={styles.texto}>{tipo}</Text>
         <Text style={styles.texto}>{telefone}</Text>
       </View>
-      <TouchableOpacity onPress={onDelete}>
-        <FontAwesome name="remove" size={24} color="#E9E9E9" />
-      </TouchableOpacity>
+      <View style={styles.divIcons}>
+        <TouchableOpacity onPress={onDelete} style={styles.icons}>
+          <FontAwesome name="remove" size={24} color="#E9E9E9" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={onEdit} style={styles.icons}>
+          <AntDesign name="edit" size={24} color="#E9E9E9" />
+        </TouchableOpacity>
+      </View>
     </TouchableOpacity>
-      
   </>
   );
 }
@@ -26,6 +31,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 15,
     flex: 1,
+    backgroundColor: '#1C1C1C'
   },
   img: {
     borderRadius: 15,
@@ -44,4 +50,12 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'space-evenly',
   },
+  divIcons:{
+    display: 'flex',
+    flexDirection: 'row'
+  },
+  icons: {
+    padding: 5
+  }
+  
 });

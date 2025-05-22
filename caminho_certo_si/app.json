@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "caminho_certo_si",
-    "slug": "snack-23db46be-09da-496d-b322-0b2080a4413c",
+    "slug": "snack-c233404e-5255-4884-86fb-223d8484183d",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,7 +19,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "edgeToEdgeEnabled": true
     },
     "web": {
       "favicon": "./assets/favicon.png"

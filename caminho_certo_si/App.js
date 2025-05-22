@@ -11,16 +11,18 @@ export default function App() {
     <>
       <NavigationContainer>
         <Stack.Navigator screenOptions={defaultOptions}>
-          <Stack.Screen
-            name="Home"
-            component={HomeView}
-            options={homeOptions}
-          />
-          <Stack.Screen
+<Stack.Screen
             name="Contatos"
             component={ContactsView}
             options={contactsOptions}
           />
+        <Stack.Screen
+          name="Home"
+          component={HomeView}
+          options={homeOptions}
+        />
+        
+
         </Stack.Navigator>
       </NavigationContainer>
     </>
