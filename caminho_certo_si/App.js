@@ -1,6 +1,6 @@
 import HomeView from './Home/HomeView';
 import ContactsView from './Contacts/ContactsView';
-
+import SosView from './sos/SosView';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -11,18 +11,21 @@ export default function App() {
     <>
       <NavigationContainer>
         <Stack.Navigator screenOptions={defaultOptions}>
-<Stack.Screen
+          <Stack.Screen
+            name="Home"
+            component={HomeView}
+            options={homeOptions}
+          />
+          <Stack.Screen
             name="Contatos"
             component={ContactsView}
             options={contactsOptions}
           />
-        <Stack.Screen
-          name="Home"
-          component={HomeView}
-          options={homeOptions}
-        />
-        
-
+          <Stack.Screen
+            name="SOS"
+            component={SosView}
+          />
+          
         </Stack.Navigator>
       </NavigationContainer>
     </>

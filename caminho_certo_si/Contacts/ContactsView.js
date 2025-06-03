@@ -6,7 +6,6 @@ import {
   Portal,
   Dialog,
   TextInput,
-  DefaultTheme,
 } from 'react-native-paper';
 import Card from './Card';
 import Feather from '@expo/vector-icons/Feather';
@@ -115,6 +114,7 @@ export default function ContactsView({ navigation }) {
               {...item}
               onDelete={() => excluir(item.id)}
               onEdit={() => editar(item)}
+              onPress={() => navigation.navigate('SOS', item)}
             />
           )}
         />
