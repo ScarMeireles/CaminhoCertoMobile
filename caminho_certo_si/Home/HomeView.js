@@ -42,7 +42,7 @@ export default function HomeView({ navigation }) {
             <MyButton
               color="gray"
               title="REGISTRO"
-              onPress={() => alert('Clicou no botão REGISTRO!')}
+              onPress={() => navigation.navigate('Registro')}
             />
             <MyButton
               color="gray"

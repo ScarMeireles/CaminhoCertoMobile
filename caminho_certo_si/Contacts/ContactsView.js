@@ -148,23 +148,7 @@ export default function ContactsView({ navigation }) {
                   <MaskInput
                     {...props}
                     onChangeText={(masked, unmasked) => setTelefone(masked)}
-                    mask={[
-                      '(',
-                      /\d/,
-                      /\d/,
-                      ')',
-                      ' ',
-                      /\d/,
-                      /\d/,
-                      /\d/,
-                      /\d/,
-                      /\d/,
-                      '-',
-                      /\d/,
-                      /\d/,
-                      /\d/,
-                      /\d/,
-                    ]}
+                    mask={['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
                   />
                 )}
               />
